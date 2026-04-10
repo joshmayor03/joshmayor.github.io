@@ -1,17 +1,19 @@
-// DARK MODE TOGGLE
+// DARK MODE
 const toggle = document.getElementById("darkToggle");
 
 toggle.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 });
 
-// SIMPLE ANIMATION ON SCROLL (optional enhancement)
+// SCROLL REVEAL EFFECT
+const elements = document.querySelectorAll(".card, .job");
+
 window.addEventListener("scroll", () => {
-    document.querySelectorAll(".card").forEach(card => {
-        const rect = card.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
+    elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            el.style.opacity = 1;
+            el.style.transform = "translateY(0)";
         }
     });
 });
