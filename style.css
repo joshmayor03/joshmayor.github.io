@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Arial", sans-serif;
+    font-family: Arial;
     scroll-behavior: smooth;
 }
 
@@ -16,11 +16,9 @@ body.dark {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 20px 50px;
     position: fixed;
     width: 100%;
-    top: 0;
     background: rgba(0,0,0,0.6);
     backdrop-filter: blur(10px);
     z-index: 1000;
@@ -44,24 +42,21 @@ body.dark {
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #141e30, #243b55);
     color: white;
 }
 
-.hero h1 {
-    font-size: 50px;
+.typing {
+    font-size: 45px;
     animation: fadeIn 2s ease;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {opacity:0; transform: translateY(20px);}
+    to {opacity:1; transform: translateY(0);}
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 20px;
     padding: 12px 25px;
     background: white;
     color: black;
@@ -80,27 +75,60 @@ body.dark {
     text-align: center;
 }
 
-/* GLASS EFFECT */
 .glass {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.08);
     backdrop-filter: blur(10px);
 }
 
-/* GRID PROJECTS */
-.grid {
+/* TIMELINE */
+.timeline {
     display: flex;
     justify-content: center;
+    gap: 40px;
     flex-wrap: wrap;
+}
+
+.job {
+    width: 300px;
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+}
+
+/* SKILLS */
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.skills-grid div {
+    width: 250px;
+}
+
+.skills-grid span {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 12px;
+    background: #243b55;
+    color: white;
+    border-radius: 20px;
+}
+
+/* PROJECTS */
+.grid {
+    display: flex;
     gap: 20px;
-    margin-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
     width: 260px;
     padding: 20px;
-    border-radius: 15px;
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
     transition: 0.3s;
 }
 
@@ -108,20 +136,10 @@ body.dark {
     transform: translateY(-10px);
 }
 
-/* SKILLS */
-.skills span {
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 5px;
-    background: #764ba2;
-    color: white;
-    border-radius: 20px;
-}
-
 /* FOOTER */
 footer {
     padding: 20px;
-    text-align: center;
     background: #111;
     color: white;
+    text-align: center;
 }
